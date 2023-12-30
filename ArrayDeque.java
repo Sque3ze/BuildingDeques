@@ -11,7 +11,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
     private static final int STARTSIZE = 8;
 
-    private static final int MAGICNUMBERLOL = 4;
+    private static final int HardNumber = 4;
 
     /** Creates an empty list. */
     public ArrayDeque() {
@@ -46,7 +46,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
 
     /** Resizes the underlying array to the target capacity. */
     private void resize() {
-        if (size < (items.length / MAGICNUMBERLOL) && size != 0) {
+        if (size < (items.length / HardNumber) && size != 0) {
             T[] a = (T[]) new Object[items.length / 2];
             copyArray(a);
         }
